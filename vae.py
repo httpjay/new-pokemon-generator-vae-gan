@@ -71,9 +71,11 @@ def train_vae(model, loader, device, epochs=10, lr=2e-4, beta=1.0, save_dir="res
     os.makedirs(save_dir, exist_ok=True)
     opt = torch.optim.Adam(model.parameters(), lr=lr)
 
+    history = {"total": [], "recon": [], "kl": []}
     model.train()
     for epoch in range(1, epochs + 1):
         total, total_rec, total_kl = 0.0, 0.0, 0.0
+        num_batches = 0
 
         for x in loader:
             x = x.to(device)
@@ -88,8 +90,17 @@ def train_vae(model, loader, device, epochs=10, lr=2e-4, beta=1.0, save_dir="res
             total += loss.item()
             total_rec += rec.item()
             total_kl += kl.item()
+            num_batches += 1
 
         n = len(loader.dataset)
+        avg_loss = total / num_batches
+        avg_rec  = total_rec / num_batches
+        avg_kl   = total_kl / num_batches
+
+        history["total"].append(avg_loss)
+        history["recon"].append(avg_rec)
+        history["kl"].append(avg_kl)
+
         print(f"[VAE] Epoch {epoch}/{epochs}  loss={total/n:.4f}  rec={total_rec/n:.4f}  kl={total_kl/n:.4f}")
 
         # save recon samples
@@ -102,4 +113,4 @@ def train_vae(model, loader, device, epochs=10, lr=2e-4, beta=1.0, save_dir="res
                 gen = model.decode(z)
                 save_grid(gen, f"{save_dir}/gen_epoch_{epoch}.png", nrow=8, denorm=False)
 
-       
+    return history

@@ -2,8 +2,11 @@
 
 This project implements a Variational Autoencoder (VAE) and a Generative Adversarial Network (GAN) from scratch in PyTorch to generate 64x64 Pokémon-style images.
 
+<<<<<<< HEAD
 ---
 
+=======
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 ## 🚀 Features
 - Custom PyTorch implementation of:
   - DCGAN with spectral normalization
@@ -13,31 +16,51 @@ This project implements a Variational Autoencoder (VAE) and a Generative Adversa
 - TTUR (Two Time-Scale Update Rule)
 - Instance noise for GAN stabilization
 
+<<<<<<< HEAD
 ---
 
+=======
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 ## 📂 Dataset
 The models are trained on the **Complete Pokémon Image Dataset** containing ~2,500 high-quality images.
 - **Source:** [Pokémon Images Dataset (Kaggle)](https://www.kaggle.com/datasets/kvpratama/pokemon-images-dataset)
 - **Format:** 64x64 RGB Images
 - **Structure:** Images are organized into generational subfolders (Gen1, Gen2, etc.), which are parsed recursively by the data loader.
 
+<<<<<<< HEAD
 ---
 
 ## 🏗️ Project Structure
 ```text
+pokemon-image-generation-vae-gan/
+=======
+## 🏗️ Project Structure
+```text
 Pokemon_VAE_GAN/
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 ├── main.py            # Main entry point for training
 ├── vae.py             # VAE architecture & loss function
 ├── gan.py             # GAN (Generator/Discriminator) architecture
 ├── utils.py           # Data loaders & image saving utilities
+<<<<<<< HEAD
+├── plots.py           # Training loss visualization utilities
 ├── results_vae/       # Reconstructions & training progress images
 ├── results_gan/       # Generated Pokémon samples
 ├── models/            # Saved .pth model weights
+├── images/            # README images (loss curves, hardware screenshots)
+=======
+├── results_vae/       # Reconstructions & training progress images
+├── results_gan/       # Generated Pokémon samples
+├── models/            # Saved .pth model weights
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 ├── requirements.txt   # List of dependencies
 ├── README.md          # Project documentation
 └── .gitignore         # Files excluded from GitHub (weights/data)
 ```
+<<<<<<< HEAD
 ---
+=======
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 
 ## 🧠 Models
 
@@ -55,8 +78,11 @@ Pokemon_VAE_GAN/
 - Extra generator step
 - Instance noise
 
+<<<<<<< HEAD
 ---
 
+=======
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 ## 📈 Results
 
 GAN samples after 300 epochs:
@@ -67,8 +93,11 @@ VAE samples:
 
 ![VAE Sample](results_vae/recon_epoch_200.png)
 
+<<<<<<< HEAD
 ---
 
+=======
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 ## ⚙️ Run
 
 1. Installation
@@ -87,6 +116,7 @@ python main.py
 The final results of the training runs (200-300 epochs) will be saved in the results_vae/ and results_gan/ folders.
 
 ---
+<<<<<<< HEAD
 ## 📈 Training Curves
 
 ### GAN Loss (300 Epochs)
@@ -111,6 +141,8 @@ This demonstrates full hardware acceleration using PyTorch's MPS backend and hig
 Despite early controversies in the late 1990s, Pokémon remains one of the most globally recognized media franchises — making it an interesting structured dataset for generative modeling experiments.
 
 ---
+=======
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 
 ## 📌 Summary
 
@@ -118,6 +150,10 @@ This project demonstrates the implementation and training of deep generative mod
 
 ---
 
+<<<<<<< HEAD
 Part of my graduate work in deep generative modeling at Loyola Marymount University.
 
 
+=======
+Part of my graduate work in deep generative modeling at Loyola Marymount University.
+>>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)

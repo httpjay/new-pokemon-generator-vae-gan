@@ -72,9 +72,13 @@ def train_gan(G, D, loader, device, epochs=300, lr=2e-4, latent_dim=100, save_di
     opt_d = torch.optim.Adam(D.parameters(), lr=lr, betas=(0.5, 0.999))
     bce = nn.BCEWithLogitsLoss()
 
+    g_loss_history = []
+    d_loss_history = []
+
     for epoch in range(1, epochs + 1):
         G.train(); D.train()
         loss_g_total, loss_d_total = 0.0, 0.0
+        num_batches = 0
 
         for real in loader:
             real = real.to(device)
@@ -116,9 +120,14 @@ def train_gan(G, D, loader, device, epochs=300, lr=2e-4, latent_dim=100, save_di
 
             loss_d_total += loss_d.item()
             loss_g_total += loss_g.item()
+            num_batches += 1
 
-        avg_d = loss_d_total / len(loader)
-        avg_g = loss_g_total / len(loader)
+        avg_d = loss_d_total / num_batches
+        avg_g = loss_g_total / num_batches
+
+        d_loss_history.append(avg_d)
+        g_loss_history.append(avg_g)
+
         print(f"[GAN] Epoch {epoch}/{epochs}  D_loss={avg_d:.4f}  G_loss={avg_g:.4f}")
 
         # Save samples periodically
@@ -129,3 +138,5 @@ def train_gan(G, D, loader, device, epochs=300, lr=2e-4, latent_dim=100, save_di
                 samples = G(z)
                 save_grid(samples, f"{save_dir}/samples_epoch_{epoch}.png", nrow=8, denorm=True)
                 G.train()
+
+    return g_loss_history, d_loss_history
