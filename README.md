@@ -73,9 +73,8 @@ The script automatically detects Apple Silicon (MPS), CUDA, or CPU:
 python main.py
 ```
 
-```text
 The final results of the training runs (200-300 epochs) will be saved in the results_vae/ and results_gan/ folders.
-```
+
 
 Developed as part of the Graduate Computer Science program at Loyola Marymount University (LMU).
 
