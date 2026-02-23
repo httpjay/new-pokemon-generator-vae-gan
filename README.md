@@ -26,10 +26,6 @@ The models are trained on the **Complete Pokémon Image Dataset** containing ~2,
 ## 🏗️ Project Structure
 ```text
 pokemon-image-generation-vae-gan/
-=======
-## 🏗️ Project Structure
-```text
-Pokemon_VAE_GAN/
 ├── main.py            # Main entry point for training
 ├── vae.py             # VAE architecture & loss function
 ├── gan.py             # GAN (Generator/Discriminator) architecture
