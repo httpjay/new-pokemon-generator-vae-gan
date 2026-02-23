@@ -118,8 +118,6 @@ This demonstrates full hardware acceleration using PyTorch's MPS backend and hig
 Despite early controversies in the late 1990s, Pokémon remains one of the most globally recognized media franchises — making it an interesting structured dataset for generative modeling experiments.
 
 ---
-=======
->>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 
 ## 📌 Summary
 
