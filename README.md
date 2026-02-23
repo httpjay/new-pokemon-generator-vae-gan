@@ -87,6 +87,14 @@ python main.py
 The final results of the training runs (200-300 epochs) will be saved in the results_vae/ and results_gan/ folders.
 
 ---
+## 📈 Training Curves
+
+### GAN Loss (300 Epochs)
+![GAN Training Loss](results/gan_loss.png)
+
+### VAE Loss Components
+![VAE Loss Components](results/vae_loss.png)
+---
 
 ## 💻 Training Environment & Hardware Utilization
 
