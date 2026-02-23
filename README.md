@@ -30,22 +30,18 @@ pokemon-image-generation-vae-gan/
 ## 🏗️ Project Structure
 ```text
 Pokemon_VAE_GAN/
->>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 ├── main.py            # Main entry point for training
 ├── vae.py             # VAE architecture & loss function
 ├── gan.py             # GAN (Generator/Discriminator) architecture
 ├── utils.py           # Data loaders & image saving utilities
-<<<<<<< HEAD
 ├── plots.py           # Training loss visualization utilities
 ├── results_vae/       # Reconstructions & training progress images
 ├── results_gan/       # Generated Pokémon samples
 ├── models/            # Saved .pth model weights
 ├── images/            # README images (loss curves, hardware screenshots)
-=======
 ├── results_vae/       # Reconstructions & training progress images
 ├── results_gan/       # Generated Pokémon samples
 ├── models/            # Saved .pth model weights
->>>>>>> 4d07027 (Update VAE/GAN architecture, add plotting utility, and resume logic)
 ├── requirements.txt   # List of dependencies
 ├── README.md          # Project documentation
 └── .gitignore         # Files excluded from GitHub (weights/data)
