@@ -50,15 +50,33 @@ Pokemon_VAE_GAN/
 
 ## 📈 Results
 
-GAN samples after 200 epochs:
+GAN samples after 300 epochs:
 
-![GAN Sample](results_gan/sample_example.png)
+![GAN Sample](results_gan/samples_epoch_300.png)
 
 VAE samples:
 
-![VAE Sample](results_vae/sample_example.png)
+![VAE Sample](results_vae/recon_epoch_200.png)
 
 ## ⚙️ Run
 
+1. Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Training
+The script automatically detects Apple Silicon (MPS), CUDA, or CPU:
+
 ```bash
 python main.py
+```
+
+```text
+The final results of the training runs (200-300 epochs) will be saved in the results_vae/ and results_gan/ folders.
+```
+
+Developed as part of the Graduate Computer Science program at Loyola Marymount University (LMU).
+
+
