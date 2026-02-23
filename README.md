@@ -75,7 +75,14 @@ python main.py
 
 The final results of the training runs (200-300 epochs) will be saved in the results_vae/ and results_gan/ folders.
 
+---
 
-Developed as part of the Graduate Computer Science program at Loyola Marymount University (LMU).
+## 📌 Summary
+
+This project demonstrates the implementation and training of deep generative models (VAE and GAN) to synthesize novel Pokémon-style images. It highlights training stabilization techniques, latent space learning, and practical experimentation with generative modeling.
+
+---
+
+Part of my graduate work in deep generative modeling at Loyola Marymount University.
 
 
